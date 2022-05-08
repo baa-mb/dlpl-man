@@ -5,7 +5,7 @@ function spiele (anz: number) {
     basic.showIcon(IconNames.Happy)
 }
 input.onSound(DetectedSound.Loud, function () {
-    spiele(1)
+    spiele(0)
 })
 input.onButtonPressed(Button.A, function () {
     spiele(10)
@@ -15,12 +15,12 @@ input.onGesture(Gesture.Shake, function () {
 })
 function anzeige () {
     basic.clearScreen()
+    music.startMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.OnceInBackground)
     basic.showString("BMBWF")
     for (let index = 0; index < 3; index++) {
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
     }
-    music.startMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.OnceInBackground)
     basic.clearScreen()
     basic.showString("DLPL")
     for (let index = 0; index < 3; index++) {
@@ -30,4 +30,10 @@ function anzeige () {
     basic.pause(2000)
 }
 basic.showIcon(IconNames.Happy)
-input.setSoundThreshold(SoundThreshold.Loud, 173)
+input.setSoundThreshold(SoundThreshold.Loud, 150)
+basic.forever(function () {
+    if (input.lightLevel() < 100) {
+        spiele(0)
+    }
+    basic.pause(1000)
+})
