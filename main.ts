@@ -3,6 +3,7 @@ function spiele (anz: number) {
         anzeige()
     }
     basic.showIcon(IconNames.Happy)
+    power.lowPowerRequest()
 }
 input.onSound(DetectedSound.Loud, function () {
     spiele(0)
@@ -16,13 +17,13 @@ input.onGesture(Gesture.Shake, function () {
 function anzeige () {
     basic.clearScreen()
     music.startMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.OnceInBackground)
-    basic.showString("BMBWF")
+    basic.showString("DLPL")
     for (let index = 0; index < 3; index++) {
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
     }
     basic.clearScreen()
-    basic.showString("DLPL")
+    basic.showString("BMBWF")
     for (let index = 0; index < 3; index++) {
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
