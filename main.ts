@@ -2,7 +2,7 @@ function spiele (anz: number) {
     for (let Index = 0; Index <= anz; Index++) {
         anzeige()
     }
-    basic.showIcon(IconNames.No)
+    basic.showIcon(IconNames.Diamond)
 }
 input.onSound(DetectedSound.Loud, function () {
     spiele(0)
