@@ -33,8 +33,9 @@ function anzeige () {
 basic.showIcon(IconNames.Happy)
 input.setSoundThreshold(SoundThreshold.Loud, 150)
 basic.forever(function () {
+    basic.pause(1000)
     if (input.lightLevel() < 50) {
+        basic.showIcon(IconNames.Square)
         spiele(0)
     }
-    basic.pause(1000)
 })
