@@ -2,7 +2,7 @@ function spiele (anz: number) {
     for (let Index = 0; Index <= anz; Index++) {
         anzeige()
     }
-    basic.showString("A")
+    basic.showIcon(IconNames.Happy)
 }
 input.onSound(DetectedSound.Loud, function () {
     spiele(1)
@@ -30,4 +30,4 @@ function anzeige () {
     basic.pause(1000)
 }
 basic.showIcon(IconNames.Happy)
-input.setSoundThreshold(SoundThreshold.Loud, 202)
+input.setSoundThreshold(SoundThreshold.Loud, 173)
