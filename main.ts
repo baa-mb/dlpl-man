@@ -29,5 +29,4 @@ function anzeige () {
     }
     basic.pause(1000)
 }
-basic.showIcon(IconNames.Heart)
-basic.showString("A")
+basic.showIcon(IconNames.Happy)
