@@ -2,17 +2,17 @@ function spiele (anz: number) {
     for (let Index = 0; Index <= anz; Index++) {
         anzeige()
     }
-    basic.showIcon(IconNames.Happy)
-    power.lowPowerRequest()
+    basic.showIcon(IconNames.No)
 }
 input.onSound(DetectedSound.Loud, function () {
     spiele(0)
 })
 input.onButtonPressed(Button.A, function () {
     spiele(10)
+    power.lowPowerPause(3600000)
 })
 input.onGesture(Gesture.Shake, function () {
-    spiele(1)
+    spiele(0)
 })
 function anzeige () {
     basic.clearScreen()
@@ -33,7 +33,7 @@ function anzeige () {
 basic.showIcon(IconNames.Happy)
 input.setSoundThreshold(SoundThreshold.Loud, 150)
 basic.forever(function () {
-    if (input.lightLevel() < 100) {
+    if (input.lightLevel() < 50) {
         spiele(0)
     }
     basic.pause(1000)
