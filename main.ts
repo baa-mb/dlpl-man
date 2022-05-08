@@ -20,8 +20,8 @@ function anzeige () {
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
     }
-    basic.clearScreen()
     music.startMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.OnceInBackground)
+    basic.clearScreen()
     basic.showString("DLPL")
     for (let index = 0; index < 3; index++) {
         basic.showIcon(IconNames.SmallHeart)
