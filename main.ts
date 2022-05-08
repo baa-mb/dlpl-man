@@ -27,7 +27,7 @@ function anzeige () {
         basic.showIcon(IconNames.SmallHeart)
         basic.showIcon(IconNames.Heart)
     }
-    basic.pause(1000)
+    basic.pause(2000)
 }
 basic.showIcon(IconNames.Happy)
 input.setSoundThreshold(SoundThreshold.Loud, 173)
